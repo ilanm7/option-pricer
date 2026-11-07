@@ -10,3 +10,7 @@ gains = np.maximum(ST - K, 0)
 prix = np.exp(-r * T) * gains.mean()
 
 print(prix)  # attendu : environ 10.45
+
+gains_put = np.maximum(K - ST, 0)
+prix_put = np.exp(-r * T) * gains_put.mean()
+print(prix_put)  # attendu : environ 5.57
